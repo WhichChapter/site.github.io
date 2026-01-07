@@ -1,4 +1,4 @@
-// ===== MOBILE MENU =====
+// ===== MOBILE MENU ===== 
 const menu = document.getElementById("mobile-menu");
 const links = document.querySelector(".nav-links");
 
@@ -24,6 +24,7 @@ revealOnScroll();
 // ===== BUTTON RIPPLE =====
 document.querySelectorAll(".btn").forEach(btn => {
     btn.addEventListener("click", e => {
+        // Ripple effect
         const ripple = document.createElement("span");
         ripple.style.position = "absolute";
         ripple.style.width = ripple.style.height = "120px";
@@ -36,6 +37,21 @@ document.querySelectorAll(".btn").forEach(btn => {
 
         setTimeout(() => ripple.remove(), 600);
     });
+});
+
+// ===== COPY LINK =====
+const copyBtn = document.querySelector("#download .btn");
+const scriptLink = "https://yourdomain.com/okkkkkkVape.lua"; // <-- replace with your actual script link
+
+copyBtn.addEventListener("click", () => {
+    navigator.clipboard.writeText(scriptLink)
+        .then(() => {
+            copyBtn.textContent = "Copied!";
+            setTimeout(() => {
+                copyBtn.textContent = "Copy Link";
+            }, 2000);
+        })
+        .catch(err => console.error("Failed to copy:", err));
 });
 
 // ===== RIPPLE KEYFRAMES =====
@@ -52,4 +68,3 @@ style.innerHTML = `
     }
 }`;
 document.head.appendChild(style);
-
