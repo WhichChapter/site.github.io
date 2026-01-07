@@ -106,6 +106,26 @@ nav {
     transform: scale(1.05);
 }
 
+
+.atn {
+    margin-top: 2rem;
+    display: inline-block;
+    padding: 14px 36px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #7c7cff, #9a9aff);
+    color: #050509;
+    font-weight: 700;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(124,124,255,0.6);
+    transition: transform 0.2s;
+}
+
+.atn:hover {
+    transform: scale(1.05);
+}
+
 /* ===== SECTIONS ===== */
 section {
     padding: 120px 10%;
