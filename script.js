@@ -41,7 +41,7 @@ document.querySelectorAll(".btn").forEach(btn => {
 
 // ===== COPY LINK =====
 const copyBtn = document.querySelector("#download .btn");
-const scriptLink = "https://yourdomain.com/okkkkkkVape.lua"; // <-- replace with your actual script link
+const scriptLink = "loadstring(game:HttpGet("https://raw.githubusercontent.com/WhichChapter/okkkkkkVape/main/NewMainScript.lua", true))()"; // <-- replace with your actual script link
 
 copyBtn.addEventListener("click", () => {
     navigator.clipboard.writeText(scriptLink)
